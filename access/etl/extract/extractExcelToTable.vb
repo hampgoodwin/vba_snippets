@@ -1,8 +1,9 @@
 '' -----------------------------------------------------------------
 ''  - Procedure: Perform extraction of an excel file to an access
 ''      table.
-''  - Dependencies (References):
+''  - References:
 ''      - Microsoft Excel 15.0 Object Library
+''  - Dependencies:
 ''      - abelgoodwin1988/vba_snippets/io/selectFile
 ''      - abelgoodwin1988/vba_snippets/access...
 ''          io/getDestinationTable
@@ -22,7 +23,7 @@ Sub extractExcelToTable(filePath As String)
 '' Destination Information
     Dim destinationTableName As String
 
-    '' Assign passed string filePame parameter to local var, and get fileName
+    '' Assign passed string fileName parameter to local var, and get fileName
     srcFilePath = filePath
     srcFileName = Right(srcFilePath, Len(srcFilePath) - InStrRev(srcFilePath, "\"))
 
